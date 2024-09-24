@@ -4,12 +4,14 @@ def excluir():
   '''
   Exclui um usuário informado pelo usuário.
   
-  Caso o índice digitado pelo usuário não exista, gera um erro e pergunta novamente.'''
+  Caso o índice digitado pelo usuário não exista, gera um erro e pergunta novamente.
+  '''
   while True:
-    a = int(input("\nInsira o índice do usuário que quer excluir: "))
-    try:
-      usuarios.remove(usuarios[a])
-      print("Usuário excluído com sucesso!\n")
-      break
-    except IndexError:
-      print("Digite um índice existente (lembre-se: a faixa númerica vai de 0 até n - 1): ")
+    email = str(input("\nInsira o email do usuário que quer excluir: "))
+    for i, usuario in enumerate(usuarios):
+      if usuario["Email"] == email:
+        del usuario[i]
+        print("Usuário excluído com sucesso!\n")
+        return
+      else:
+        print("Usuário não encontrado. Por favor verifique se o emial digitado está correto e de que o usuário desejado está cadastrado!")

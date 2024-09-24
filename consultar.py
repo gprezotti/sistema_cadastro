@@ -7,9 +7,10 @@ def consultar():
   Caso o índice informado pelu usuário não exista, gera um erro e pergunta novamente.
   '''
   while True:
-    a = int(input("\nInsira o índice do usuário que quer consultar: "))
-    try:
-      print(f"{usuarios[a]}\n")
-      break
-    except IndexError:
-      print("Digite um índice existente (lembre-se: a faixa númerica vai de 0 até n - 1): ")
+    email = str(input("\nInsira o email do usuario que deseja consultar: "))
+    for usuario in usuarios:
+      if usuario["Email"] == email:
+        print(f"Nome: {usuario["Nome"]}, Idade: {usuario["Idade"]}, Email: {usuario["Email"]}\n")
+        return
+      else:
+        print("Usuário não encontrado. Por favor verifique se o emial digitado está correto e de que o usuário desejado está cadastrado!")
