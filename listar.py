@@ -7,6 +7,6 @@ def listar():
   if usuarios:
     print("\nLista de usuários cadastrados:")
     for i, user in enumerate(usuarios):
-      print(f"{i} - Nome: {user["nome"]}, Idade: {user["idade"]}, Email: {user["email"]}\n")
+      print(f"{i} - Nome: {user["Nome"]}, Idade: {user["Idade"]}, Email: {user["Email"]}\n")
   else:
     print("Nenhum usuário foi cadastrado ainda!\n")

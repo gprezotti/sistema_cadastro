@@ -9,8 +9,8 @@ def sair():
   '''
   atributos = ["Nome", "Idade", "Email"]
   
-  with open("texto/dados.csv", "w", newline="") as arquivo_csv:
-    writer = csv.DictWriter(arquivo_csv, fieldnames=atributos)
+  with open("texto/dados.csv", "w", newline="") as arquivoCsv:
+    writer = csv.DictWriter(arquivoCsv, fieldnames=atributos)
     writer.writeheader()
     writer.writerows(usuarios)
     print("Dados salvos em 'texto/dados.csv' com sucesso!")

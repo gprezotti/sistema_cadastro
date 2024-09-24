@@ -1,10 +1,6 @@
-import menu
-import cadastrar
-import listar
-import consultar
-import sair
-import excluir
+import menu, cadastrar, listar, consultar, sair, excluir, carregar
 
+carregar.carregarDados()
 
 while True:
   opcao = menu.menu()

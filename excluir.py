@@ -10,7 +10,7 @@ def excluir():
     email = str(input("\nInsira o email do usuário que quer excluir: "))
     for i, usuario in enumerate(usuarios):
       if usuario["Email"] == email:
-        del usuario[i]
+        del usuarios[i]
         print("Usuário excluído com sucesso!\n")
         return
       else:
